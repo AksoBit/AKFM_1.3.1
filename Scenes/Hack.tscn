@@ -1,0 +1,173 @@
+[gd_scene load_steps=25 format=3 uid="uid://bgjhe3y7ud0r0"]
+
+[ext_resource type="Script" uid="uid://bpd8d01c0qiuc" path="res://Scripts/rigid_body_2d_3 (2).gd" id="1_r2p04"]
+[ext_resource type="Texture2D" uid="uid://d4gqhtapgpbi1" path="res://Sprites/Hack/hack.png" id="2_am1lo"]
+[ext_resource type="Shader" uid="uid://cie8slgga3ka4" path="res://Shaders/Flashing.gdshader" id="2_e3otq"]
+[ext_resource type="Script" uid="uid://dati1fdku3rr2" path="res://Scripts/UwUwUwUwU.gd" id="3_8rhuy"]
+[ext_resource type="Texture2D" uid="uid://dp7jf3gqi0u5x" path="res://Sprites/truster.png" id="4_r2p04"]
+[ext_resource type="Script" uid="uid://cwprac4aogtaf" path="res://Scripts/sprite_2d_2.gd" id="5_1tryr"]
+[ext_resource type="Texture2D" uid="uid://chkmjxija8fl8" path="res://Sprites/Spark.png" id="6_5im1k"]
+[ext_resource type="Texture2D" uid="uid://ddrjdpa4vp7ll" path="res://Sprites/NeonParticle.png" id="7_am1lo"]
+[ext_resource type="AudioStream" uid="uid://cfmguh2j6vstt" path="res://Sounds/Болгарка.wav" id="7_liqdm"]
+[ext_resource type="FontFile" uid="uid://ba8dqphbk1c1i" path="res://Fonts/Fifaks10Dev1.ttf" id="10_e3otq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_it74k"]
+radius = 25.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tugjx"]
+radius = 26.0
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8rhuy"]
+polygon = PackedVector2Array(6, -26, 6, -25, 8, -25, 8, -24, 9, -24, 9, -23, 10, -23, 10, -22, 11, -22, 11, -21, 12, -21, 12, -19, 13, -19, 13, -18, 14, -18, 14, -16, 15, -16, 15, -14, 16, -14, 16, -4, 14, -4, 14, -3, 12, -3, 12, -2, 10, -2, 10, -1, 8, -1, 8, 0, 6, 0, 6, 1, 5, 1, 5, 2, 6, 2, 6, 3, 7, 3, 7, 4, 8, 4, 8, 5, 21, 5, 21, 4, 22, 4, 22, 3, 23, 3, 23, 0, 24, 0, 24, -1, 25, -1, 25, -3, 26, -3, 26, 6, 25, 6, 25, 8, 24, 8, 24, 9, 23, 9, 23, 10, 22, 10, 22, 11, 21, 11, 21, 12, 19, 12, 19, 13, 18, 13, 18, 14, 16, 14, 16, 15, 14, 15, 14, 16, 4, 16, 4, 14, 3, 14, 3, 12, 2, 12, 2, 10, 1, 10, 1, 8, 0, 8, 0, 6, -1, 6, -1, 5, -2, 5, -2, 6, -3, 6, -3, 7, -4, 7, -4, 8, -5, 8, -5, 21, -4, 21, -4, 22, -3, 22, -3, 23, 0, 23, 0, 24, 1, 24, 1, 25, 3, 25, 3, 26, -6, 26, -6, 25, -8, 25, -8, 24, -9, 24, -9, 23, -10, 23, -10, 22, -11, 22, -11, 21, -12, 21, -12, 19, -13, 19, -13, 18, -14, 18, -14, 16, -15, 16, -15, 14, -16, 14, -16, 4, -14, 4, -14, 3, -12, 3, -12, 2, -10, 2, -10, 1, -8, 1, -8, 0, -6, 0, -6, -1, -5, -1, -5, -2, -6, -2, -6, -3, -7, -3, -7, -4, -8, -4, -8, -5, -21, -5, -21, -4, -22, -4, -22, -3, -23, -3, -23, 0, -24, 0, -24, 1, -25, 1, -25, 3, -26, 3, -26, -6, -25, -6, -25, -8, -24, -8, -24, -9, -23, -9, -23, -10, -22, -10, -22, -11, -21, -11, -21, -12, -19, -12, -19, -13, -18, -13, -18, -14, -16, -14, -16, -15, -14, -15, -14, -16, -4, -16, -4, -14, -3, -14, -3, -12, -2, -12, -2, -10, -1, -10, -1, -8, 0, -8, 0, -6, 1, -6, 1, -5, 2, -5, 2, -6, 3, -6, 3, -7, 4, -7, 4, -8, 5, -8, 5, -21, 4, -21, 4, -22, 3, -22, 3, -23, 0, -23, 0, -24, -1, -24, -1, -25, -3, -25, -3, -26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_am1lo"]
+atlas = ExtResource("4_r2p04")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rhuy"]
+atlas = ExtResource("4_r2p04")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3otq"]
+atlas = ExtResource("4_r2p04")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tryr"]
+atlas = ExtResource("4_r2p04")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5im1k"]
+atlas = ExtResource("4_r2p04")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liqdm"]
+atlas = ExtResource("4_r2p04")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_it74k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_am1lo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rhuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3otq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tryr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5im1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liqdm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 60.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4cdcu"]
+radius = 3.16228
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7vgp5"]
+lifetime_randomness = 0.45
+particle_flag_align_y = true
+particle_flag_disable_z = true
+angle_min = 100.0
+angle_max = 100.0
+spread = 105.674
+initial_velocity_max = 64.52
+gravity = Vector3(0, 50, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_liqdm"]
+shader = ExtResource("2_e3otq")
+shader_parameter/Flashing = false
+shader_parameter/White = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_51wp6"]
+font = ExtResource("10_e3otq")
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ManHack" type="CharacterBody2D" parent="."]
+texture_filter = 1
+collision_layer = 4
+collision_mask = 271
+safe_margin = 0.2
+script = ExtResource("1_r2p04")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ManHack"]
+shape = SubResource("CircleShape2D_it74k")
+
+[node name="AttackArea" type="Area2D" parent="ManHack"]
+collision_layer = 4
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ManHack/AttackArea"]
+shape = SubResource("CircleShape2D_tugjx")
+
+[node name="Sprite2D" type="Sprite2D" parent="ManHack"]
+texture = ExtResource("2_am1lo")
+flip_h = true
+script = ExtResource("3_8rhuy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="ManHack/Sprite2D"]
+visible = false
+occluder = SubResource("OccluderPolygon2D_8rhuy")
+
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="ManHack"]
+sprite_frames = SubResource("SpriteFrames_it74k")
+flip_h = true
+flip_v = true
+script = ExtResource("5_1tryr")
+
+[node name="ContactPos" type="CollisionShape2D" parent="ManHack/Sprite2D2"]
+position = Vector2(26, 0)
+shape = SubResource("CircleShape2D_4cdcu")
+disabled = true
+
+[node name="sparks" type="GPUParticles2D" parent="ManHack/Sprite2D2/ContactPos"]
+rotation = 3.14159
+emitting = false
+amount = 100
+amount_ratio = 0.4
+texture = ExtResource("6_5im1k")
+one_shot = true
+speed_scale = 4.63
+explosiveness = 1.0
+randomness = 1.0
+trail_sections = 2
+trail_section_subdivisions = 1
+process_material = SubResource("ParticleProcessMaterial_7vgp5")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="ManHack/Sprite2D2"]
+material = SubResource("ShaderMaterial_liqdm")
+position = Vector2(-10, 0)
+rotation = 3.14159
+amount = 3
+texture = ExtResource("7_am1lo")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ManHack"]
+stream = ExtResource("7_liqdm")
+bus = &"SFX"
+
+[node name="RichTextLabel" type="Label" parent="ManHack"]
+offset_left = -46.0
+offset_top = -96.0
+offset_right = 47.0
+offset_bottom = 11.0
+text = "OWO"
+label_settings = SubResource("LabelSettings_51wp6")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="ManHack/AttackArea" to="ManHack" method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="ManHack/AttackArea" to="ManHack" method="_on_attack_area_body_exited"]

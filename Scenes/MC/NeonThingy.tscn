@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://cvd1o2qddv1ii"]
+
+[ext_resource type="Script" uid="uid://u15wijqc5mev" path="res://Scripts/MC/Rift.gd" id="1_dr2n6"]
+[ext_resource type="Texture2D" uid="uid://cvtxrc7jqajtl" path="res://Sprites/MC/IsItLikePlasmaNeonTearThingy.png" id="1_xmtd0"]
+[ext_resource type="Texture2D" uid="uid://b57apis4asg0i" path="res://Sprites/MC/IsItLikePlasmaNeonTearThingyButOnTheEnd.png" id="2_dr2n6"]
+[ext_resource type="Texture2D" uid="uid://bm5psh1rp816w" path="res://Sprites/MC/RiftLine.png" id="3_cp5aj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cp5aj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfw33"]
+atlas = ExtResource("1_xmtd0")
+region = Rect2(0, 0, 20, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcvmy"]
+atlas = ExtResource("1_xmtd0")
+region = Rect2(20, 0, 20, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhhmn"]
+atlas = ExtResource("1_xmtd0")
+region = Rect2(40, 0, 20, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssrd1"]
+atlas = ExtResource("1_xmtd0")
+region = Rect2(60, 0, 20, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfiqo"]
+atlas = ExtResource("3_cp5aj")
+region = Rect2(0, 0, 2, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pfiqo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfw33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcvmy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhhmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssrd1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfiqo")
+}],
+"loop": true,
+"name": &"line",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" groups=["NeonRifts"]]
+script = ExtResource("1_dr2n6")
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="."]
+shape = SubResource("RectangleShape2D_cp5aj")
+collision_mask = 5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1, 100)
+sprite_frames = SubResource("SpriteFrames_pfiqo")
+animation = &"line"
+
+[node name="TearStart" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 52.5)
+texture = ExtResource("2_dr2n6")
+
+[node name="TearEnd" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_dr2n6")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

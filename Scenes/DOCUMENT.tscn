@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=3 uid="uid://cfim7c6xuil0q"]
+
+[ext_resource type="Texture2D" uid="uid://baoglgt3rjbwa" path="res://Sprites/Document.png" id="1_swt7k"]
+[ext_resource type="FontFile" uid="uid://ba8dqphbk1c1i" path="res://Fonts/Fifaks10Dev1.ttf" id="2_fejj2"]
+[ext_resource type="Script" uid="uid://cj47nxwlj0tr8" path="res://Scripts/AksoBit/document.gd" id="2_ortx0"]
+[ext_resource type="Texture2D" uid="uid://dpaukasuhs1bq" path="res://Sprites/AksoBit/Sign.png" id="4_ortx0"]
+[ext_resource type="Texture2D" uid="uid://rox5fi1oyhf6" path="res://Sprites/AksoBit/UserSign.png" id="5_pi3mc"]
+[ext_resource type="Script" uid="uid://c6k8s8fbcxgiv" path="res://Scripts/AksoBit/Sign.gd" id="6_g5vwm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ortx0"]
+font = ExtResource("2_fejj2")
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+shadow_size = 7
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Document" type="Sprite2D" parent="."]
+position = Vector2(294.5, 180.00002)
+scale = Vector2(3.4083335, 2.1428573)
+texture = ExtResource("1_swt7k")
+script = ExtResource("2_ortx0")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 91.0
+offset_right = 499.0
+offset_bottom = 357.0
+text = "Я, имя_пользователя
+пребывая в твердом уме и здравой памяти полностью осознаю восхитительную и вопиющую неиграбельность и выходящие из нее риски появления включая, но не заканчивая:
+Мигрени
+Тошноты
+Рвоты
+Рака глаз
+Рака мозга
+Вареного рака 
+Диарии 
+ПТСР
+Шизофрении
+Суицидальных наклонностей
+Гинофобии
+Мучительной смерти
+
+Настоящим заявлением я освобождаю АксоБита и АксоБита от ответственности и обязуюсь принять вину за убийство 35-го президента Соединенных Штатов Америки Джона Фицджералда Кеннеди в пятницу 22 ноября 1963 года в Далласе. 
+
+ДАТА,             , имя"
+label_settings = SubResource("LabelSettings_ortx0")
+autowrap_mode = 3
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(278, 335)
+texture = ExtResource("4_ortx0")
+
+[node name="UserSign" type="Sprite2D" parent="."]
+position = Vector2(396, 335)
+texture = ExtResource("5_pi3mc")
+
+[node name="TextureRect" type="TextureRect" parent="UserSign"]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+script = ExtResource("6_g5vwm")
+
+[node name="UserSign2" type="Sprite2D" parent="."]
+position = Vector2(396, 335)
+texture = ExtResource("5_pi3mc")

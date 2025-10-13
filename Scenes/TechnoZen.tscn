@@ -1,0 +1,251 @@
+[gd_scene load_steps=26 format=3 uid="uid://cuhtkraetxw67"]
+
+[ext_resource type="Script" uid="uid://cwrjo50ginl0" path="res://Sprites/TechnoZen.gd" id="1_vj2kx"]
+[ext_resource type="Texture2D" uid="uid://4yk30l3xt2fm" path="res://Sprites/TechnoZen/Body/SomeGravyStuffIdk.png" id="2_t5jxm"]
+[ext_resource type="Texture2D" uid="uid://ct0ime7g2lrfl" path="res://Sprites/TechnoZen/Body/Main.png" id="2_vj2kx"]
+[ext_resource type="Texture2D" uid="uid://cvemxtwfwhmq4" path="res://Sprites/TechnoZen/Faces/(◕‿◕✿).png" id="3_xh2mq"]
+[ext_resource type="Texture2D" uid="uid://c02w4nm5s16gy" path="res://Sprites/TechnoZen/Faces/ERR.png" id="4_p853r"]
+[ext_resource type="Texture2D" uid="uid://dcnmk6k5gxce1" path="res://Sprites/TechnoZen/Faces/(◡‿◡✿).png" id="5_hj2y4"]
+[ext_resource type="Texture2D" uid="uid://dvdfx3l27ldm7" path="res://Sprites/TechnoZen/Faces/(}︿{).png" id="6_7saci"]
+[ext_resource type="Texture2D" uid="uid://cdgj2m16wkbsf" path="res://Sprites/TechnoZen/Faces/(◕‿↼✿) .png" id="7_kgcj2"]
+[ext_resource type="Texture2D" uid="uid://ob6bheip2x6b" path="res://Sprites/TechnoZen/Faces/-_-.png" id="8_tfgwq"]
+[ext_resource type="Texture2D" uid="uid://bwqn458kxim4r" path="res://Sprites/TechnoZen/Faces/(◠‿◠✿) .png" id="9_i2nt7"]
+[ext_resource type="Texture2D" uid="uid://c87g88qoqsl0i" path="res://Sprites/TechnoZen/Faces/(￢︿￢✿).png" id="10_hj2y4"]
+[ext_resource type="AudioStream" uid="uid://d1tkchf62p6dw" path="res://Sounds/Enemies/TechnoZen/FuckingDie.wav" id="12_7saci"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p853r"]
+radius = 99.0202
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mvw8"]
+atlas = ExtResource("2_t5jxm")
+region = Rect2(0, 0, 16, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s68ti"]
+atlas = ExtResource("2_t5jxm")
+region = Rect2(16, 0, 16, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_438m0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mvw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s68ti")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vumpq"]
+atlas = ExtResource("4_p853r")
+region = Rect2(0, 0, 56, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twps8"]
+atlas = ExtResource("5_hj2y4")
+region = Rect2(0, 0, 56, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cifa3"]
+atlas = ExtResource("7_kgcj2")
+region = Rect2(0, 0, 56, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxkib"]
+atlas = ExtResource("8_tfgwq")
+region = Rect2(0, 0, 56, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idi0e"]
+atlas = ExtResource("9_i2nt7")
+region = Rect2(0, 0, 56, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpoam"]
+atlas = ExtResource("3_xh2mq")
+region = Rect2(0, 0, 56, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c6ast"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vumpq")
+}],
+"loop": true,
+"name": &"ERR",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twps8")
+}],
+"loop": true,
+"name": &"Horizontal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cifa3")
+}],
+"loop": true,
+"name": &"IDK",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxkib")
+}],
+"loop": true,
+"name": &"OVERDRIVE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idi0e")
+}],
+"loop": true,
+"name": &"Vertical",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpoam")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="FontFile" id="FontFile_hj2y4"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/31/0/ascent = 0.0
+cache/0/31/0/descent = 0.0
+cache/0/31/0/underline_position = 0.0
+cache/0/31/0/underline_thickness = 0.0
+cache/0/31/0/scale = 1.0
+cache/0/33/0/ascent = 0.0
+cache/0/33/0/descent = 0.0
+cache/0/33/0/underline_position = 0.0
+cache/0/33/0/underline_thickness = 0.0
+cache/0/33/0/scale = 1.0
+cache/0/34/0/ascent = 0.0
+cache/0/34/0/descent = 0.0
+cache/0/34/0/underline_position = 0.0
+cache/0/34/0/underline_thickness = 0.0
+cache/0/34/0/scale = 1.0
+cache/0/35/0/ascent = 0.0
+cache/0/35/0/descent = 0.0
+cache/0/35/0/underline_position = 0.0
+cache/0/35/0/underline_thickness = 0.0
+cache/0/35/0/scale = 1.0
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
+cache/0/37/0/ascent = 0.0
+cache/0/37/0/descent = 0.0
+cache/0/37/0/underline_position = 0.0
+cache/0/37/0/underline_thickness = 0.0
+cache/0/37/0/scale = 1.0
+cache/0/38/0/ascent = 0.0
+cache/0/38/0/descent = 0.0
+cache/0/38/0/underline_position = 0.0
+cache/0/38/0/underline_thickness = 0.0
+cache/0/38/0/scale = 1.0
+cache/0/39/0/ascent = 0.0
+cache/0/39/0/descent = 0.0
+cache/0/39/0/underline_position = 0.0
+cache/0/39/0/underline_thickness = 0.0
+cache/0/39/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/41/0/ascent = 0.0
+cache/0/41/0/descent = 0.0
+cache/0/41/0/underline_position = 0.0
+cache/0/41/0/underline_thickness = 0.0
+cache/0/41/0/scale = 1.0
+cache/0/42/0/ascent = 0.0
+cache/0/42/0/descent = 0.0
+cache/0/42/0/underline_position = 0.0
+cache/0/42/0/underline_thickness = 0.0
+cache/0/42/0/scale = 1.0
+cache/0/43/0/ascent = 0.0
+cache/0/43/0/descent = 0.0
+cache/0/43/0/underline_position = 0.0
+cache/0/43/0/underline_thickness = 0.0
+cache/0/43/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_hj2y4"]
+font = SubResource("FontFile_hj2y4")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TechnoZen" type="CharacterBody2D" parent="."]
+collision_layer = 4
+collision_mask = 263
+script = ExtResource("1_vj2kx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TechnoZen"]
+polygon = PackedVector2Array(-31, -32, -21, -22, 21, -22, 31, -32, 31, 15, 10, 45, -10, 45, -31, 15)
+
+[node name="Area2D" type="Area2D" parent="TechnoZen"]
+
+[node name="ContactPos" type="CollisionShape2D" parent="TechnoZen/Area2D"]
+shape = SubResource("CircleShape2D_p853r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TechnoZen"]
+texture_filter = 1
+position = Vector2(0, 49.5)
+sprite_frames = SubResource("SpriteFrames_438m0")
+frame_progress = 0.14101236
+
+[node name="Main" type="Sprite2D" parent="TechnoZen"]
+texture_filter = 1
+texture = ExtResource("2_vj2kx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TechnoZen/Main"]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_c6ast")
+animation = &"IDK"
+
+[node name="Sprite2D2" type="Sprite2D" parent="TechnoZen/Main/AnimatedSprite2D"]
+visible = false
+texture = ExtResource("10_hj2y4")
+
+[node name="Sprite2D" type="Sprite2D" parent="TechnoZen/Main/AnimatedSprite2D"]
+visible = false
+texture = ExtResource("6_7saci")
+
+[node name="RichTextLabel" type="Label" parent="TechnoZen"]
+offset_left = -46.0
+offset_top = -117.0
+offset_right = 47.0
+offset_bottom = -10.0
+text = "100"
+label_settings = SubResource("LabelSettings_hj2y4")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TechnoZen"]
+stream = ExtResource("12_7saci")
+bus = &"SFX"
+
+[connection signal="body_entered" from="TechnoZen/Area2D" to="TechnoZen" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="TechnoZen/Area2D" to="TechnoZen" method="_on_area_2d_body_exited"]

@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://b05rddicartd8"]
+
+[ext_resource type="Script" uid="uid://bj4e0prm7pkit" path="res://Scenes/∞/streetlight.gd" id="1_kn4yn"]
+[ext_resource type="Texture2D" uid="uid://dhhvhvxvxcao4" path="res://Sprites/∞/Interior/LightThingyIFogotpng.png" id="2_oybf0"]
+[ext_resource type="AudioStream" uid="uid://bmphnctr5egca" path="res://Sounds/Bulb.wav" id="3_maao5"]
+[ext_resource type="Texture2D" uid="uid://dnt6s6utynko8" path="res://Sprites/∞/Interior/LightFromThatThingy.png" id="4_vobun"]
+[ext_resource type="Texture2D" uid="uid://chkmjxija8fl8" path="res://Sprites/Spark.png" id="5_ee3f5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpxsl"]
+size = Vector2(20, 22)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_swnua"]
+lifetime_randomness = 0.45
+particle_flag_align_y = true
+particle_flag_disable_z = true
+angle_min = 100.0
+angle_max = 100.0
+spread = 105.674
+initial_velocity_max = 64.52
+gravity = Vector3(0, 50, 0)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Streetlight" type="StaticBody2D" parent="." groups=["Destroyable"]]
+collision_layer = 512
+collision_mask = 15
+script = ExtResource("1_kn4yn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Streetlight"]
+position = Vector2(0, -60)
+shape = SubResource("RectangleShape2D_fpxsl")
+
+[node name="Streetlight" type="Sprite2D" parent="Streetlight"]
+texture = ExtResource("2_oybf0")
+
+[node name="Bulb" type="AudioStreamPlayer" parent="Streetlight"]
+stream = ExtResource("3_maao5")
+bus = &"SFX"
+
+[node name="PointLight2D" type="PointLight2D" parent="Streetlight"]
+texture_filter = 2
+position = Vector2(0, -16)
+color = Color(0.3285, 0.4824083, 0.73, 1)
+shadow_enabled = true
+texture = ExtResource("4_vobun")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Streetlight"]
+position = Vector2(0, -55)
+rotation = 4.712389
+emitting = false
+amount = 10
+texture = ExtResource("5_ee3f5")
+lifetime = 2.0
+one_shot = true
+speed_scale = 4.63
+explosiveness = 1.0
+trail_lifetime = 0.2
+trail_sections = 2
+trail_section_subdivisions = 1
+process_material = SubResource("ParticleProcessMaterial_swnua")

@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://bliviqyh5phgy"]
+
+[ext_resource type="Script" uid="uid://uiawa4bhgmxm" path="res://Scripts/Rojer.gd" id="1_81ewt"]
+[ext_resource type="Texture2D" uid="uid://b7cdknetgmrnt" path="res://Sprites/ReRodger.png" id="2_wwooq"]
+[ext_resource type="Script" uid="uid://d0rxcfmiw78ee" path="res://Scripts/attack_area.gd" id="4_1rjej"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vcgo"]
+size = Vector2(25, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kd477"]
+size = Vector2(10, 21)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s5mcx"]
+radius = 216.0
+height = 518.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Roach" type="CharacterBody2D" parent="."]
+collision_layer = 4
+collision_mask = 263
+platform_floor_layers = 4294967290
+script = ExtResource("1_81ewt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roach"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_1vcgo")
+
+[node name="AttackArea" type="Area2D" parent="Roach"]
+script = ExtResource("4_1rjej")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Roach/AttackArea"]
+position = Vector2(-16.5, -8)
+shape = SubResource("RectangleShape2D_kd477")
+debug_color = Color(0.998493, 0, 0.140566, 0.42)
+
+[node name="JumpRange" type="Area2D" parent="Roach"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roach/JumpRange"]
+shape = SubResource("CapsuleShape2D_s5mcx")
+debug_color = Color(0.76, 0.456, 0, 0.019607844)
+
+[node name="BiTimer" type="Timer" parent="Roach"]
+wait_time = 0.1
+one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Roach" groups=["Flashable"]]
+texture_filter = 1
+position = Vector2(0, -5)
+texture = ExtResource("2_wwooq")
+
+[connection signal="body_entered" from="Roach/AttackArea" to="Roach" method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="Roach/AttackArea" to="Roach" method="_on_attack_area_body_exited"]
+[connection signal="body_shape_entered" from="Roach/AttackArea" to="Roach" method="_on_attack_area_body_shape_entered"]
+[connection signal="body_entered" from="Roach/JumpRange" to="Roach" method="_on_jump_range_body_entered"]
+[connection signal="body_exited" from="Roach/JumpRange" to="Roach" method="_on_jump_range_body_exited"]
+[connection signal="timeout" from="Roach/BiTimer" to="Roach" method="_on_bi_timer_timeout"]

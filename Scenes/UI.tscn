@@ -1,0 +1,213 @@
+[gd_scene load_steps=19 format=3 uid="uid://1yb4wbnegc86"]
+
+[ext_resource type="Texture2D" uid="uid://bc3ru1casnl48" path="res://Sprites/Battarey-Sheet.png" id="1_dewlx"]
+[ext_resource type="FontFile" uid="uid://ba8dqphbk1c1i" path="res://Fonts/Fifaks10Dev1.ttf" id="2_hfhsn"]
+[ext_resource type="Script" uid="uid://c38jvxskpucjb" path="res://Scripts/label.gd" id="3_qwshj"]
+[ext_resource type="Texture2D" uid="uid://cjvbi5ipyhyac" path="res://Sprites/MC/overload_bar.png" id="4_hfhsn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0im1g"]
+atlas = ExtResource("1_dewlx")
+region = Rect2(0, 0, 140, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07w6w"]
+atlas = ExtResource("1_dewlx")
+region = Rect2(560, 0, 140, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jfdy"]
+atlas = ExtResource("1_dewlx")
+region = Rect2(700, 0, 140, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8kya"]
+atlas = ExtResource("1_dewlx")
+region = Rect2(840, 0, 140, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtc0d"]
+atlas = ExtResource("1_dewlx")
+region = Rect2(980, 0, 140, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2003"]
+atlas = ExtResource("1_dewlx")
+region = Rect2(140, 0, 140, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwnhs"]
+atlas = ExtResource("1_dewlx")
+region = Rect2(280, 0, 140, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xiypv"]
+atlas = ExtResource("1_dewlx")
+region = Rect2(420, 0, 140, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iff5l"]
+atlas = ExtResource("1_dewlx")
+region = Rect2(1680, 0, 140, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjiyg"]
+atlas = ExtResource("1_dewlx")
+region = Rect2(1540, 0, 140, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37b32"]
+atlas = ExtResource("1_dewlx")
+region = Rect2(1400, 0, 140, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdi6t"]
+atlas = ExtResource("1_dewlx")
+region = Rect2(1260, 0, 140, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbcqp"]
+atlas = ExtResource("1_dewlx")
+region = Rect2(1120, 0, 140, 66)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_48q88"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0im1g")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07w6w")
+}],
+"loop": true,
+"name": &"108",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jfdy")
+}],
+"loop": true,
+"name": &"144",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8kya")
+}],
+"loop": true,
+"name": &"180",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtc0d")
+}],
+"loop": true,
+"name": &"216",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2003")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwnhs")
+}],
+"loop": true,
+"name": &"36",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xiypv")
+}],
+"loop": true,
+"name": &"72",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iff5l")
+}],
+"loop": true,
+"name": &"OVERDRIVE 144",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjiyg")
+}],
+"loop": true,
+"name": &"OVERDRIVE 180",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37b32")
+}],
+"loop": true,
+"name": &"OVERDRIVE 216",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdi6t")
+}],
+"loop": true,
+"name": &"OVERDRIVE FULL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbcqp")
+}],
+"loop": true,
+"name": &"over 216",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="UI" type="AnimatedSprite2D" parent="."]
+position = Vector2(70, 33)
+sprite_frames = SubResource("SpriteFrames_48q88")
+animation = &"72"
+
+[node name="Label" type="Label" parent="UI"]
+offset_left = -70.0
+offset_top = 31.0
+offset_right = 198.0
+offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("2_hfhsn")
+theme_override_font_sizes/font_size = 12
+text = "pos: 0 ; 0
+vel 0 ; 0
+en:
+isd:
+isj:
+
+"
+script = ExtResource("3_qwshj")
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="Label" parent="UI"]
+texture_filter = 1
+offset_left = -44.0
+offset_top = -22.0
+offset_right = 38.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_hfhsn")
+theme_override_font_sizes/font_size = 48
+text = "100
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(320, 180)
+
+[node name="OverloadBar" type="Sprite2D" parent="."]
+position = Vector2(57, 61)
+texture = ExtResource("4_hfhsn")
+
+[node name="Label" type="Label" parent="OverloadBar"]
+offset_left = 74.0
+offset_top = -17.0
+offset_right = 114.0
+offset_bottom = 6.0
+text = "0%"

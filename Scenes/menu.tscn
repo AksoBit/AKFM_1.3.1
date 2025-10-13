@@ -1,0 +1,608 @@
+[gd_scene load_steps=41 format=3 uid="uid://djb65ej7jfkgw"]
+
+[ext_resource type="Script" uid="uid://bmjmsxv5yjpcm" path="res://Scenes/controls.gd" id="1_wwsa2"]
+[ext_resource type="Script" uid="uid://vn0ragwmn6vf" path="res://Scripts/main_menu.gd" id="2_158mb"]
+[ext_resource type="Texture2D" uid="uid://qgk22uky6ykv" path="res://Sprites/WARNING.png" id="2_wwsa2"]
+[ext_resource type="AudioStream" uid="uid://b6o2lwyfadj0m" path="res://Music/1xx/100 Continue.ogg" id="3_wwsa2"]
+[ext_resource type="Script" uid="uid://dssya31kfslx6" path="res://Scripts/PolyButton.gd" id="6_l6llh"]
+[ext_resource type="Script" uid="uid://b5tat81hf6q51" path="res://Scripts/MenuButton.gd" id="6_ocger"]
+[ext_resource type="Texture2D" uid="uid://dgmow4id2axdy" path="res://Sprites/Synth.png" id="6_wbdvm"]
+[ext_resource type="Texture2D" uid="uid://lo64rt3uuwmf" path="res://Sprites/Car.png" id="7_q3rjx"]
+[ext_resource type="Script" uid="uid://c68l5wtmdp0nw" path="res://Scripts/UwUwUwU.gd" id="9_i37ye"]
+[ext_resource type="AudioStream" uid="uid://cy4yxgjr4r5qk" path="res://Sounds/opened-the-car-door.mp3" id="10_pde1v"]
+[ext_resource type="Texture2D" uid="uid://baqswstkfsvlg" path="res://Sprites/Grabber.png" id="11_3p34a"]
+[ext_resource type="StyleBox" uid="uid://ck1eiesqg272e" path="res://Scenes/Edging.tres" id="11_d77ms"]
+[ext_resource type="Texture2D" uid="uid://5o4wgqfp0530" path="res://Sprites/ФонСинтSun.png" id="11_dldpb"]
+[ext_resource type="Texture2D" uid="uid://b4q3sdhdifyot" path="res://Sprites/ФонСинт.png" id="11_rfqti"]
+[ext_resource type="Script" uid="uid://boncn2yfamhgt" path="res://Scripts/OptionsButton.gd" id="12_g8i7c"]
+[ext_resource type="Texture2D" uid="uid://c3unlvvfrpcn4" path="res://Sprites/ФонСинтNoSun.png" id="13_dldpb"]
+[ext_resource type="Script" uid="uid://8m8lruoc5kec" path="res://Scripts/MenuSoundPoly.gd" id="13_h63v2"]
+[ext_resource type="Texture2D" uid="uid://v3fse3w33vr5" path="res://Sprites/PolyTexture.png" id="13_l6llh"]
+[ext_resource type="Texture2D" uid="uid://bamqcqb4ghnre" path="res://Sprites/PolyEdging2.png" id="13_owyel"]
+[ext_resource type="Script" uid="uid://dmgbxfm0frdwe" path="res://Scripts/SettingSun.gd" id="14_d77ms"]
+[ext_resource type="Texture2D" uid="uid://p60mvl6vaj06" path="res://Sprites/Menu/SettingsControl.png" id="15_3p34a"]
+[ext_resource type="Texture2D" uid="uid://bt23pl37a84uq" path="res://Sprites/Menu/SettingsBack.png" id="16_owyel"]
+[ext_resource type="Texture2D" uid="uid://yreyg6amlr0o" path="res://Sprites/Menu/SettingsSound.png" id="17_h63v2"]
+[ext_resource type="Texture2D" uid="uid://c3knkvv1i5lni" path="res://Sprites/Menu/SettingsGraphics.png" id="18_l6llh"]
+[ext_resource type="AudioStream" uid="uid://b66uyep17pi8m" path="res://Sounds/ROAD.wav" id="18_nakb8"]
+[ext_resource type="Script" uid="uid://csqaf8xrfm51d" path="res://Scripts/ResetEverything.gd" id="19_jbv25"]
+[ext_resource type="Texture2D" uid="uid://cqkv1dguooo0e" path="res://Sprites/Menu/Nah, i miscalled that one graphics. THIS ONE is graphics.png" id="19_ocger"]
+[ext_resource type="Script" uid="uid://cx2ehyer8t20w" path="res://Scenes/CRT.gd" id="21_pde1v"]
+[ext_resource type="Shader" uid="uid://cf7f5lsu5ynts" path="res://Scenes/CRT.gdshader" id="28_nakb8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l6llh"]
+radius = 91.0055
+
+[sub_resource type="Animation" id="Animation_q3rjx"]
+length = 8.0
+loop_mode = 1
+step = 0.0333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenu/AnimationPlayer/CollisionShape2D/Car:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0349066, -0.0349066, 0.0349066]
+}
+
+[sub_resource type="Animation" id="Animation_6swd7"]
+resource_name = "Y"
+length = 6.0
+loop_mode = 1
+step = 0.033
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenu/AnimationPlayer/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.0333333, 3, 6),
+"transitions": PackedFloat32Array(1.07177, 1, 1),
+"update": 0,
+"values": [Vector2(0, -10), Vector2(0, 10), Vector2(0, -10)]
+}
+
+[sub_resource type="Animation" id="Animation_wbdvm"]
+resource_name = "drive"
+length = 10.0
+loop_mode = 1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenu/AnimationPlayer/CollisionShape2D/Car:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(330, 190), Vector2(310, 180), Vector2(330, 190)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6swd7"]
+_data = {
+&"RESET": SubResource("Animation_q3rjx"),
+&"Y": SubResource("Animation_6swd7"),
+&"drive": SubResource("Animation_wbdvm")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_pde1v"]
+line_spacing = 23.0
+paragraph_spacing = 2.0
+font_size = 36
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3p34a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d77ms"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_owyel"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h63v2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pde1v"]
+shader = ExtResource("28_nakb8")
+shader_parameter/curva = 7.0
+shader_parameter/vin_mult = 0.25
+shader_parameter/blur = 0.3
+shader_parameter/scanlines_mult = 0.1
+
+[node name="Node2D" type="Node2D"]
+texture_filter = 1
+
+[node name="options" type="Panel" parent="."]
+visible = false
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="VSlider" type="VSlider" parent="options"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 14.0
+offset_right = 113.0
+offset_bottom = 351.0
+max_value = 200.0
+value = 100.0
+
+[node name="Label" type="Label" parent="options"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 92.0
+offset_right = 146.0
+offset_bottom = 115.0
+text = "Скорость музяки"
+
+[node name="Label" type="Label" parent="options/Label"]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 187.0
+offset_right = 414.0
+offset_bottom = 236.0
+text = "громакость
+ музяки"
+
+[node name="Control" type="Control" parent="options"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HSlider" type="HSlider" parent="options"]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 306.0
+offset_right = 592.0
+offset_bottom = 322.0
+max_value = 1000.0
+value = 500.0
+
+[node name="Controls" type="Button" parent="options"]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 206.0
+offset_right = 600.0
+offset_bottom = 237.0
+text = "Управление
+"
+
+[node name="CheckButton" type="CheckButton" parent="options"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 42.0
+offset_right = 209.0
+offset_bottom = 66.0
+button_pressed = true
+text = "VSync"
+
+[node name="Warning" type="Sprite2D" parent="options"]
+position = Vector2(527, 192)
+texture = ExtResource("2_wwsa2")
+
+[node name="MainMenu" type="CanvasLayer" parent="."]
+script = ExtResource("2_158mb")
+
+[node name="Label" type="Label" parent="MainMenu"]
+anchors_preset = -1
+anchor_left = 0.583
+anchor_top = 0.347
+anchor_right = 0.798
+anchor_bottom = 0.411
+offset_left = -0.119995
+offset_top = 0.0800018
+offset_right = 0.279968
+offset_bottom = 0.0399933
+text = "Менюшка типа..."
+metadata/_edit_use_anchors_ = true
+
+[node name="Synth" type="Sprite2D" parent="MainMenu"]
+position = Vector2(320, 180)
+texture = ExtResource("6_wbdvm")
+
+[node name="Area2D" type="Area2D" parent="MainMenu/Synth"]
+script = ExtResource("6_ocger")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainMenu/Synth/Area2D"]
+position = Vector2(1, -69)
+shape = SubResource("CircleShape2D_l6llh")
+
+[node name="Control" type="Area2D" parent="MainMenu/Synth"]
+position = Vector2(-320, -180)
+script = ExtResource("6_l6llh")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MainMenu/Synth/Control"]
+polygon = PackedVector2Array(0, 133, 63, 109, 92, 135, 132, 115, 236, 167, 360, 149, 375, 165, 456, 92, 524, 120, 600, 98, 620, 140, 640, 133, 640, 360, 0, 361)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="MainMenu"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_6swd7")
+}
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="MainMenu"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_6swd7")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainMenu"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_6swd7")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainMenu/AnimationPlayer"]
+
+[node name="Car" type="Sprite2D" parent="MainMenu/AnimationPlayer/CollisionShape2D"]
+texture_filter = 1
+position = Vector2(330, 190)
+rotation = 0.0349066
+texture = ExtResource("7_q3rjx")
+
+[node name="Exit" type="Button" parent="MainMenu/AnimationPlayer/CollisionShape2D/Car"]
+visibility_layer = 0
+anchors_preset = -1
+anchor_left = -0.0596346
+anchor_top = 0.241336
+anchor_right = 0.0153654
+anchor_bottom = 0.318836
+offset_left = 231.552
+offset_top = -44.5343
+offset_right = 239.552
+offset_bottom = -44.5343
+rotation = 0.702354
+metadata/_edit_use_anchors_ = true
+
+[node name="Start" type="Button" parent="MainMenu/AnimationPlayer/CollisionShape2D/Car"]
+visibility_layer = 0
+anchors_preset = -1
+anchor_left = -0.000860304
+anchor_top = -0.0538513
+anchor_right = 0.0109038
+anchor_bottom = 0.0586488
+offset_left = -158.415
+offset_top = 19.5405
+offset_right = -50.4146
+offset_bottom = 50.5405
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="MainMenu/AnimationPlayer/CollisionShape2D/Car"]
+script = ExtResource("9_i37ye")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MainMenu/AnimationPlayer/CollisionShape2D/Car/Area2D"]
+polygon = PackedVector2Array(-340, -200, -340, -141.9, -246.4, -104, -245.1, -104, -195.9, -20.3, -203, -10.1, -210, -15, -210, -18.1, -263.1, -15, -265.3, -15, -271.3, -1, -275.2, -1, -267, 15.4, -267, 17.8, -232.6, 21.8, -317, 39.4, -336.9, 38, -340, 38, -340, 200, 340, 200, 340, 32.9, 314.8, 35, 311.1, 35, 260.5, 21.2, 290.3, 17, 296.7, 17, 300, -1.8, 300, -4.7, 293, -13.7, 293, -15.9, 257, -17, 244.5, -17, 229.3, -9.5, 226.8, -17.9, 274, -100, 332, -126, 332, -126.4, 340, -128, 340, -200, 235.152, -200.329, 214.888, -121.574, 170.966, -3.96904, 126.643, -12.4274, 11.6088, -11.4121, -121.973, -25.7589, -156.394, -8.54715, -186.356, -121.57, -21, -136, 27.1992, -138.033, 215.887, -121.608, 235.152, -200.329)
+
+[node name="OpenedTheCarDoor" type="AudioStreamPlayer" parent="MainMenu/AnimationPlayer/CollisionShape2D/Car"]
+stream = ExtResource("10_pde1v")
+volume_db = 10.0
+bus = &"SFX"
+
+[node name="Exit2" type="Button" parent="MainMenu/AnimationPlayer/CollisionShape2D/Car"]
+visibility_layer = 0
+anchors_preset = -1
+anchor_left = -0.0596346
+anchor_top = 0.241336
+anchor_right = 0.0153654
+anchor_bottom = 0.318836
+offset_left = 20.449497
+offset_top = -41.799507
+offset_right = 28.449501
+offset_bottom = -41.799507
+rotation = 8.457899e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="MainMenu/AnimationPlayer/CollisionShape2D/Car"]
+offset_left = -4.4607677
+offset_top = 44.182594
+offset_right = 35.53923
+offset_bottom = 94.182594
+text = "∞"
+label_settings = SubResource("LabelSettings_pde1v")
+
+[node name="ФонСинт" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(320, 180)
+texture = ExtResource("11_rfqti")
+script = ExtResource("12_g8i7c")
+
+[node name="BackToMain" type="TextureButton" parent="ФонСинт"]
+offset_left = -90.0
+offset_top = -90.0
+offset_right = 90.0
+offset_bottom = 90.0
+texture_normal = ExtResource("11_dldpb")
+ignore_texture_size = true
+
+[node name="Polygon2D" type="Polygon2D" parent="ФонСинт"]
+position = Vector2(1, 0)
+texture = ExtResource("13_l6llh")
+texture_offset = Vector2(545, 0)
+polygon = PackedVector2Array(-241, 80, -121, 80, -1, 80, 119, 80, 239, 80, 322, 80, 374, 190, -390, 190, -323, 80)
+script = ExtResource("13_h63v2")
+
+[node name="Line2D" type="Line2D" parent="ФонСинт"]
+position = Vector2(1, 0)
+points = PackedVector2Array(322, 80, 239, 80, 119, 80, -1, 80, -121, 80, -241, 80, -323, 80, -392, 190, 372, 185)
+closed = true
+width = 4.0
+texture = ExtResource("13_owyel")
+texture_mode = 2
+begin_cap_mode = 1
+end_cap_mode = 1
+sharp_limit = 0.0
+
+[node name="MAIN" type="VSlider" parent="ФонСинт"]
+offset_left = -10.0
+offset_top = -20.0
+offset_right = 10.0
+offset_bottom = 180.0
+theme_override_icons/grabber = ExtResource("11_3p34a")
+theme_override_icons/grabber_highlight = ExtResource("11_3p34a")
+theme_override_icons/grabber_disabled = ExtResource("11_3p34a")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_3p34a")
+theme_override_styles/grabber_area = ExtResource("11_d77ms")
+theme_override_styles/grabber_area_highlight = ExtResource("11_d77ms")
+value = 50.0
+
+[node name="SFX" type="VSlider" parent="ФонСинт"]
+offset_left = 110.0
+offset_top = -20.0
+offset_right = 130.0
+offset_bottom = 180.0
+theme_override_icons/grabber = ExtResource("11_3p34a")
+theme_override_icons/grabber_highlight = ExtResource("11_3p34a")
+theme_override_icons/grabber_disabled = ExtResource("11_3p34a")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_3p34a")
+theme_override_styles/grabber_area = ExtResource("11_d77ms")
+theme_override_styles/grabber_area_highlight = ExtResource("11_d77ms")
+value = 50.0
+
+[node name="DeBugtton" type="CheckButton" parent="ФонСинт"]
+offset_left = -23.0
+offset_top = -120.0
+offset_right = 233.0
+offset_bottom = -89.0
+text = "Крутой дебаг режим ееее"
+
+[node name="Volume" type="VSlider" parent="ФонСинт"]
+offset_left = -130.0
+offset_top = -20.0
+offset_right = -110.0
+offset_bottom = 180.0
+pivot_offset = Vector2(250, 100)
+theme_override_icons/grabber = ExtResource("11_3p34a")
+theme_override_icons/grabber_highlight = ExtResource("11_3p34a")
+theme_override_icons/grabber_disabled = ExtResource("11_3p34a")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_d77ms")
+theme_override_styles/grabber_area = ExtResource("11_d77ms")
+theme_override_styles/grabber_area_highlight = ExtResource("11_d77ms")
+step = 0.01
+value = 50.0
+
+[node name="Speed" type="VSlider" parent="ФонСинт"]
+offset_left = -250.0
+offset_top = -20.0
+offset_right = -230.0
+offset_bottom = 180.0
+pivot_offset = Vector2(806, 134)
+theme_override_icons/grabber = ExtResource("11_3p34a")
+theme_override_icons/grabber_highlight = ExtResource("11_3p34a")
+theme_override_icons/grabber_disabled = ExtResource("11_3p34a")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_owyel")
+theme_override_styles/grabber_area = ExtResource("11_d77ms")
+theme_override_styles/grabber_area_highlight = ExtResource("11_d77ms")
+max_value = 200.0
+value = 100.0
+
+[node name="Voicelines" type="VSlider" parent="ФонСинт"]
+offset_left = 230.0
+offset_top = -20.0
+offset_right = 250.0
+offset_bottom = 180.0
+theme_override_icons/grabber = ExtResource("11_3p34a")
+theme_override_icons/grabber_highlight = ExtResource("11_3p34a")
+theme_override_icons/grabber_disabled = ExtResource("11_3p34a")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_h63v2")
+theme_override_styles/grabber_area = ExtResource("11_d77ms")
+theme_override_styles/grabber_area_highlight = ExtResource("11_d77ms")
+value = 50.0
+
+[node name="Road" type="AudioStreamPlayer" parent="ФонСинт"]
+stream = ExtResource("18_nakb8")
+bus = &"SFX"
+
+[node name="100Continue" type="AudioStreamPlayer" parent="ФонСинт"]
+stream = ExtResource("3_wwsa2")
+bus = &"Music"
+
+[node name="Label" type="Label" parent="ФонСинт"]
+offset_left = -267.0
+offset_top = 156.0
+offset_right = 6.0
+offset_bottom = 179.0
+text = "Скорость         Музыка              Общая                    SFX                      Голос"
+
+[node name="Button" type="Button" parent="ФонСинт"]
+offset_left = 243.0
+offset_top = 95.0
+offset_right = 533.0
+offset_bottom = 172.0
+text = "CБРОСИТЬ
+ВСЕ НАХУлиганить конечно"
+alignment = 0
+autowrap_mode = 1
+script = ExtResource("19_jbv25")
+
+[node name="CheckButton" type="CheckButton" parent="ФонСинт"]
+offset_left = 165.0
+offset_top = 42.0
+offset_right = 209.0
+offset_bottom = 66.0
+button_pressed = true
+text = "VSync"
+
+[node name="DeBugtton2" type="CheckButton" parent="ФонСинт"]
+offset_left = -275.0
+offset_top = -145.0
+offset_right = -136.0
+offset_bottom = -114.0
+text = "OVERDRUM"
+
+[node name="Curva" type="HSlider" parent="ФонСинт"]
+offset_left = -314.0
+offset_top = -76.0
+offset_right = -72.0
+offset_bottom = -60.0
+max_value = 14.9
+step = 0.01
+value = 14.9
+
+[node name="Vin" type="HSlider" parent="ФонСинт"]
+offset_left = -313.0
+offset_top = -102.0
+offset_right = -71.0
+offset_bottom = -86.0
+max_value = 2.0
+step = 0.01
+
+[node name="Scan" type="HSlider" parent="ФонСинт"]
+offset_left = -312.0
+offset_top = -50.0
+offset_right = -70.0
+offset_bottom = -34.0
+max_value = 1.0
+step = 0.01
+
+[node name="Blur" type="HSlider" parent="ФонСинт"]
+offset_left = -313.0
+offset_top = -27.0
+offset_right = -71.0
+offset_bottom = -11.0
+max_value = 2.0
+step = 0.01
+
+[node name="CheckButton2" type="CheckButton" parent="ФонСинт"]
+offset_left = -130.0
+offset_top = -155.0
+offset_right = -36.0
+offset_bottom = -124.0
+button_pressed = true
+text = "CRT"
+
+[node name="CRT" type="ColorRect" parent="ФонСинт"]
+material = SubResource("ShaderMaterial_pde1v")
+offset_left = -320.0
+offset_top = -180.0
+offset_right = 320.0
+offset_bottom = 180.0
+mouse_filter = 2
+script = ExtResource("21_pde1v")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("1_wwsa2")
+
+[node name="Controls" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 25.0
+offset_right = 478.0
+offset_bottom = 217.0
+text = "Пока низзя назначать кнопочеки, но вот управление:
+Кстати, это кнопка выхода
+Рывок: SHIFT
+Удар: LMB
+Ходить на WASD
+Прыгать можно еще на пробел
+Энтер возвращает в меню
+E создет ЯДРО
+Ну и все покачто >w<
+"
+alignment = 0
+
+[node name="Warning" type="Sprite2D" parent="Panel"]
+position = Vector2(184, 199)
+texture = ExtResource("2_wwsa2")
+
+[node name="ФонСинтNoSun" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(320, 180)
+texture = ExtResource("13_dldpb")
+script = ExtResource("14_d77ms")
+
+[node name="SettingsControl" type="TextureButton" parent="ФонСинтNoSun"]
+offset_left = -160.0
+offset_top = -160.0
+offset_right = 160.0
+offset_bottom = -7.0
+texture_normal = ExtResource("15_3p34a")
+
+[node name="SettingsBack" type="TextureButton" parent="ФонСинтNoSun"]
+offset_left = -87.0
+offset_top = 133.0
+offset_right = 89.0
+offset_bottom = 160.0
+texture_normal = ExtResource("16_owyel")
+
+[node name="SettingsSound" type="TextureButton" parent="ФонСинтNoSun"]
+offset_left = -160.0
+offset_top = -4.0
+offset_right = 160.0
+offset_bottom = 37.0
+texture_normal = ExtResource("17_h63v2")
+
+[node name="SettingsGraphics" type="TextureButton" parent="ФонСинтNoSun"]
+offset_left = -133.0
+offset_top = 87.0
+offset_right = 135.0
+offset_bottom = 129.0
+texture_normal = ExtResource("18_l6llh")
+
+[node name="Nah,IMiscalledThatOneGraphics_ThisOneIsGraphics" type="TextureButton" parent="ФонСинтNoSun"]
+offset_left = -153.0
+offset_top = 41.0
+offset_right = 155.0
+offset_bottom = 84.0
+texture_normal = ExtResource("19_ocger")
+
+[connection signal="value_changed" from="options/VSlider" to="options" method="_on_v_slider_value_changed"]
+[connection signal="button_down" from="options/Controls" to="options" method="_on_controls_button_down"]
+[connection signal="toggled" from="options/CheckButton" to="options" method="_on_vsync_button_toggled"]
+[connection signal="mouse_entered" from="MainMenu/Synth/Area2D" to="MainMenu/Synth/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MainMenu/Synth/Area2D" to="MainMenu/Synth/Area2D" method="_on_mouse_exited"]
+[connection signal="input_event" from="MainMenu/Synth/Control" to="MainMenu/Synth/Control" method="_on_input_event"]
+[connection signal="mouse_entered" from="MainMenu/Synth/Control" to="MainMenu/Synth/Control" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MainMenu/Synth/Control" to="MainMenu/Synth/Control" method="_on_mouse_exited"]
+[connection signal="button_down" from="MainMenu/AnimationPlayer/CollisionShape2D/Car/Exit" to="MainMenu" method="_on_exit_button_down"]
+[connection signal="button_down" from="MainMenu/AnimationPlayer/CollisionShape2D/Car/Start" to="MainMenu" method="_on_start_button_down"]
+[connection signal="mouse_entered" from="MainMenu/AnimationPlayer/CollisionShape2D/Car/Area2D" to="MainMenu/AnimationPlayer/CollisionShape2D/Car/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MainMenu/AnimationPlayer/CollisionShape2D/Car/Area2D" to="MainMenu/AnimationPlayer/CollisionShape2D/Car/Area2D" method="_on_mouse_exited"]
+[connection signal="button_down" from="MainMenu/AnimationPlayer/CollisionShape2D/Car/Exit2" to="MainMenu" method="_on_infinity_button_down"]
+[connection signal="button_down" from="ФонСинт/BackToMain" to="ФонСинт" method="_on_back_to_main_button_down"]
+[connection signal="value_changed" from="ФонСинт/MAIN" to="ФонСинт" method="_on_main_value_changed"]
+[connection signal="value_changed" from="ФонСинт/SFX" to="ФонСинт" method="_on_sfx_value_changed"]
+[connection signal="button_down" from="ФонСинт/DeBugtton" to="options" method="_on_de_bugtton_button_down"]
+[connection signal="button_down" from="ФонСинт/DeBugtton" to="ФонСинт" method="_on_de_bugtton_button_down"]
+[connection signal="pressed" from="ФонСинт/DeBugtton" to="ФонСинт" method="_on_de_bugtton_pressed"]
+[connection signal="toggled" from="ФонСинт/DeBugtton" to="options" method="_on_de_bugtton_toggled"]
+[connection signal="value_changed" from="ФонСинт/Volume" to="ФонСинт" method="_on_volume_value_changed"]
+[connection signal="value_changed" from="ФонСинт/Speed" to="ФонСинт" method="_on_speed_value_changed"]
+[connection signal="value_changed" from="ФонСинт/Voicelines" to="ФонСинт" method="_on_voicelines_value_changed"]
+[connection signal="button_down" from="ФонСинт/Button" to="ФонСинт/Button" method="_on_button_down"]
+[connection signal="button_down" from="ФонСинт/CheckButton" to="ФонСинт" method="_on_check_button_button_down"]
+[connection signal="toggled" from="ФонСинт/DeBugtton2" to="ФонСинт" method="_on_de_bugtton_2_toggled"]
+[connection signal="value_changed" from="ФонСинт/Curva" to="ФонСинт" method="_on_curva_value_changed"]
+[connection signal="value_changed" from="ФонСинт/Vin" to="ФонСинт" method="_on_vin_value_changed"]
+[connection signal="value_changed" from="ФонСинт/Scan" to="ФонСинт" method="_on_scan_value_changed"]
+[connection signal="value_changed" from="ФонСинт/Blur" to="ФонСинт" method="_on_blur_value_changed"]
+[connection signal="toggled" from="ФонСинт/CheckButton2" to="ФонСинт" method="_on_check_button_2_toggled"]
+[connection signal="button_down" from="Panel/Controls" to="Panel" method="_on_controls_button_down"]
+[connection signal="button_down" from="ФонСинтNoSun/SettingsControl" to="ФонСинтNoSun" method="_on_settings_control_button_down"]
+[connection signal="button_down" from="ФонСинтNoSun/SettingsBack" to="ФонСинтNoSun" method="_on_settings_back_button_down"]
+[connection signal="button_down" from="ФонСинтNoSun/SettingsSound" to="ФонСинтNoSun" method="_on_settings_sound_button_down"]

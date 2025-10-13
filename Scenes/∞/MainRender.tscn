@@ -1,0 +1,130 @@
+[gd_scene load_steps=14 format=3 uid="uid://dda1d8r4ns7aa"]
+
+[ext_resource type="Shader" uid="uid://bikpltre5f3l2" path="res://Sprites/SubP.gdshader" id="2_visal"]
+[ext_resource type="PackedScene" uid="uid://dlomnpbd24ptv" path="res://Scenes/PeyGorno.tscn" id="3_tduug"]
+[ext_resource type="Shader" uid="uid://cie8slgga3ka4" path="res://Shaders/Flashing.gdshader" id="4_tduug"]
+[ext_resource type="PackedScene" uid="uid://bymn337vojhle" path="res://Scenes/∞/BookShelfs.tscn" id="4_visal"]
+[ext_resource type="PackedScene" uid="uid://db1rfwy6hy7x7" path="res://Scenes/∞/Main.tscn" id="5_2n60f"]
+[ext_resource type="PackedScene" uid="uid://1yb4wbnegc86" path="res://Scenes/UI.tscn" id="5_2pt40"]
+[ext_resource type="Shader" uid="uid://cf7f5lsu5ynts" path="res://Scenes/CRT.gdshader" id="7_tduug"]
+[ext_resource type="Script" uid="uid://cx2ehyer8t20w" path="res://Scenes/CRT.gd" id="8_8crby"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fryln"]
+shader = ExtResource("2_visal")
+shader_parameter/cam_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pehvp"]
+shader = ExtResource("2_visal")
+shader_parameter/cam_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8crby"]
+shader = ExtResource("4_tduug")
+shader_parameter/Flashing = true
+shader_parameter/White = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1cug7"]
+shader = ExtResource("2_visal")
+shader_parameter/cam_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2n60f"]
+shader = ExtResource("7_tduug")
+shader_parameter/curva = 7.0
+shader_parameter/vin_mult = 0.25
+shader_parameter/blur = 0.3
+shader_parameter/scanlines_mult = 0.1
+
+[node name="Node2D" type="Node2D"]
+
+[node name="SubViewportContainer4" type="SubViewportContainer" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_fryln")
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 643.0
+offset_bottom = 363.0
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer4"]
+transparent_bg = true
+handle_input_locally = false
+audio_listener_enable_2d = true
+size = Vector2i(646, 366)
+render_target_update_mode = 4
+
+[node name="layer 1" parent="SubViewportContainer4/SubViewport" instance=ExtResource("3_tduug")]
+position = Vector2(3, 3)
+
+[node name="SubViewportContainer3" type="SubViewportContainer" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_pehvp")
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 643.0
+offset_bottom = 363.0
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer3"]
+transparent_bg = true
+handle_input_locally = false
+audio_listener_enable_2d = true
+size = Vector2i(646, 366)
+render_target_update_mode = 4
+
+[node name="layer 2" parent="SubViewportContainer3/SubViewport" instance=ExtResource("4_visal")]
+position = Vector2(3, 3)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_8crby")
+offset_left = -67.0
+offset_top = -47.0
+offset_right = 710.0
+offset_bottom = 417.0
+color = Color(1, 1, 1, 0)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_1cug7")
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 643.0
+offset_bottom = 363.0
+mouse_filter = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+audio_listener_enable_2d = true
+size = Vector2i(646, 366)
+render_target_update_mode = 4
+
+[node name="Main" parent="SubViewportContainer/SubViewport" instance=ExtResource("5_2n60f")]
+position = Vector2(3, 3)
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="."]
+texture_filter = 1
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 643.0
+offset_bottom = 363.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer2"]
+transparent_bg = true
+handle_input_locally = false
+audio_listener_enable_2d = true
+size = Vector2i(646, 366)
+render_target_update_mode = 4
+
+[node name="UI" parent="SubViewportContainer2/SubViewport" instance=ExtResource("5_2pt40")]
+position = Vector2(3, 3)
+
+[node name="CRT" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_2n60f")
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
+script = ExtResource("8_8crby")

@@ -1,0 +1,170 @@
+[gd_scene load_steps=9 format=3 uid="uid://bkxhvnqwsk755"]
+
+[ext_resource type="Texture2D" uid="uid://0x8leec280ol" path="res://Sprites/Hack/HackPart1.png" id="1_t0yvp"]
+[ext_resource type="Texture2D" uid="uid://chkmjxija8fl8" path="res://Sprites/Spark.png" id="2_cy1wj"]
+[ext_resource type="Texture2D" uid="uid://drckfpr3rwqmb" path="res://Sprites/Hack/HackPart4.png" id="3_3o265"]
+[ext_resource type="Texture2D" uid="uid://b8t3lsssvon4x" path="res://Sprites/Hack/HackPart2.png" id="4_084dm"]
+[ext_resource type="Script" uid="uid://bilhhhiqomch4" path="res://Scenes/TechnoBOOM.gd" id="5_mcf1t"]
+[ext_resource type="Texture2D" uid="uid://dllupr0a2lnel" path="res://Sprites/Hack/HackPart3.png" id="6_3dt3w"]
+[ext_resource type="Texture2D" uid="uid://ddpwtbfr5p8pb" path="res://Sprites/Hack/TrusterDed.png" id="7_ives2"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uppjn"]
+lifetime_randomness = 0.45
+particle_flag_align_y = true
+particle_flag_disable_z = true
+angle_min = 100.0
+angle_max = 100.0
+spread = 105.674
+initial_velocity_max = 64.52
+gravity = Vector3(0, 50, 0)
+
+[node name="Node2D" type="Node2D" groups=["Bodies"]]
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(36, -29)
+collision_layer = 128
+collision_mask = 130
+
+[node name="HackPart1" type="Sprite2D" parent="RigidBody2D2"]
+texture_filter = 1
+position = Vector2(-70, 37)
+texture = ExtResource("1_t0yvp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2"]
+position = Vector2(-72.80351, 37.96722)
+polygon = PackedVector2Array(-7.1964874, -9.96722, -1.1964874, -1.9672203, 8.803513, -0.9672203, 2.8035126, 7.0327797, -7.1964874, -0.9672203)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="RigidBody2D2"]
+position = Vector2(-62, 43)
+rotation = 6.806784
+amount = 5
+texture = ExtResource("2_cy1wj")
+lifetime = 0.7
+speed_scale = 4.63
+explosiveness = 1.0
+trail_lifetime = 0.2
+trail_sections = 2
+trail_section_subdivisions = 1
+process_material = SubResource("ParticleProcessMaterial_uppjn")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+position = Vector2(-57, -16)
+collision_layer = 128
+collision_mask = 130
+
+[node name="HackPart4" type="Sprite2D" parent="RigidBody2D3"]
+texture_filter = 1
+position = Vector2(37, 13)
+texture = ExtResource("3_3o265")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D3"]
+position = Vector2(36.362743, 10.059463)
+polygon = PackedVector2Array(8.637257, -18.059462, -1.3627434, -17.059462, -9.362743, -5.0594616, -9.362743, 3.9405384, 2.6372566, 8.940538, -8.362743, 19.940538, -5.3627434, 23.940538, 3.6372566, 22.940538, 8.637257, 6.9405384, 1.6372566, -0.059461594, 0.6372566, -13.059462)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="RigidBody2D3"]
+position = Vector2(49.000004, 11.999998)
+rotation = 11.7809725
+amount = 5
+texture = ExtResource("2_cy1wj")
+lifetime = 0.7
+speed_scale = 4.63
+explosiveness = 1.0
+trail_lifetime = 0.2
+trail_sections = 2
+trail_section_subdivisions = 1
+process_material = SubResource("ParticleProcessMaterial_uppjn")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="RigidBody2D3/GPUParticles2D"]
+position = Vector2(-27.577175, -6.363968)
+rotation = 11.519174
+amount = 5
+texture = ExtResource("2_cy1wj")
+lifetime = 0.7
+speed_scale = 4.63
+explosiveness = 1.0
+trail_lifetime = 0.2
+trail_sections = 2
+trail_section_subdivisions = 1
+process_material = SubResource("ParticleProcessMaterial_uppjn")
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="."]
+position = Vector2(9, 26)
+collision_layer = 128
+collision_mask = 130
+
+[node name="HackPart2" type="Sprite2D" parent="RigidBody2D4"]
+texture_filter = 1
+position = Vector2(16, -36)
+texture = ExtResource("4_084dm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D4"]
+position = Vector2(18.287355, -38.153732)
+polygon = PackedVector2Array(-12.287355, 0.15373611, -13.287355, -6.846264, -0.28735495, -6.846264, 9.712645, 3.153736, 8.712645, 11.153734, 2.712645, 3.153736)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="RigidBody2D4"]
+position = Vector2(3.999998, -38)
+rotation = 8.63938
+amount = 5
+texture = ExtResource("2_cy1wj")
+lifetime = 0.7
+speed_scale = 4.63
+explosiveness = 1.0
+trail_lifetime = 0.2
+trail_sections = 2
+trail_section_subdivisions = 1
+process_material = SubResource("ParticleProcessMaterial_uppjn")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(15, 67)
+collision_layer = 128
+collision_mask = 130
+script = ExtResource("5_mcf1t")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+position = Vector2(6.393193, -52.884544)
+polygon = PackedVector2Array(-2.3931928, -19.115456, 3.6068072, -13.115454, -1.3931928, -7.1154537, 10.606807, -2.1154537, 9.606807, 6.8845463, -0.3931928, 20.884544, -7.393193, 18.884544, -0.3931928, 12.884546, -1.3931928, 1.8845463, -4.393193, -2.1154537, -5.393193, -11.115454)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="RigidBody2D"]
+position = Vector2(9, -68)
+rotation = 12.304571
+amount = 5
+texture = ExtResource("2_cy1wj")
+lifetime = 0.7
+speed_scale = 4.63
+explosiveness = 1.0
+trail_lifetime = 0.2
+trail_sections = 2
+trail_section_subdivisions = 1
+process_material = SubResource("ParticleProcessMaterial_uppjn")
+
+[node name="HackPart3" type="Sprite2D" parent="RigidBody2D"]
+texture_filter = 1
+position = Vector2(7, -53)
+texture = ExtResource("6_3dt3w")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="RigidBody2D"]
+position = Vector2(-2.000002, -59)
+rotation = -3.1415927
+amount = 5
+texture = ExtResource("2_cy1wj")
+lifetime = 0.7
+speed_scale = 4.63
+explosiveness = 1.0
+trail_lifetime = 0.2
+trail_sections = 2
+trail_section_subdivisions = 1
+process_material = SubResource("ParticleProcessMaterial_uppjn")
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="."]
+position = Vector2(38, -31)
+collision_layer = 128
+collision_mask = 130
+
+[node name="HackPart1" type="Sprite2D" parent="RigidBody2D5"]
+texture_filter = 1
+position = Vector2(-36, 29)
+texture = ExtResource("7_ives2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D5"]
+position = Vector2(-33.555553, 28.688889)
+polygon = PackedVector2Array(-12.444447, -0.6888895, 7.5555534, -6.6888895, 7.5555534, 6.3111105, -12.444447, 1.3111105)

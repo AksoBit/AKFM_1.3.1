@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3x66oicud1mi"]
+
+[ext_resource type="Texture2D" uid="uid://bgrn5hkrho7jb" path="res://Sprites/TechnoZen/Beamllet.png" id="1_tpns8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3v4s4"]
+radius = 3.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_3v4s4")
+
+[node name="Beamllet" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("1_tpns8")

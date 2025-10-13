@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dj7xff2scs0fy"
+path="res://.godot/imported/103 Early Hints (OVER 200).ogg-806995a1867ce9de5dd9d1cd078f702e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/1xx/103 Early Hints (OVER 200).ogg"
+dest_files=["res://.godot/imported/103 Early Hints (OVER 200).ogg-806995a1867ce9de5dd9d1cd078f702e.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlomnpbd24ptv"]
+
+[ext_resource type="Texture2D" uid="uid://b5huiombe7cdk" path="res://Sprites/Горы.png" id="1_ubhlq"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(320, 180)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(320, 184)
+texture = ExtResource("1_ubhlq")
