@@ -1,7 +1,8 @@
-[gd_scene load_steps=42 format=3 uid="uid://cfivro2cvucyd"]
+[gd_scene load_steps=43 format=3 uid="uid://cfivro2cvucyd"]
 
 [ext_resource type="Script" uid="uid://dj5hi7veghggu" path="res://Scripts/SomethingWicked.gd" id="1_nhhmn"]
 [ext_resource type="Script" uid="uid://d0l0mwpergp4w" path="res://Scripts/area_2d.gd" id="2_ssrd1"]
+[ext_resource type="Texture2D" uid="uid://dhdrtria0w11k" path="res://Sprites/MC/jeffrey.png" id="3_nhhmn"]
 [ext_resource type="Script" uid="uid://c1pr1j2axx4lm" path="res://Scripts/MC/jeffry.gd" id="4_ssrd1"]
 [ext_resource type="AudioStream" uid="uid://b6o2lwyfadj0m" path="res://Music/1xx/100 Continue.ogg" id="6_thbw8"]
 [ext_resource type="AudioStream" uid="uid://cf2o32vs5xb6e" path="res://Sounds/Dash.wav" id="9_78dv1"]
@@ -219,6 +220,7 @@ shape = SubResource("RectangleShape2D_g2ori")
 visible = false
 position = Vector2(72, -5)
 rotation = 3.1415882
+texture = ExtResource("3_nhhmn")
 script = ExtResource("4_ssrd1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UwUGG"]
