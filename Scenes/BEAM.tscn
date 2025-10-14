@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://chkmjxija8fl8" path="res://Sprites/Spark.png" id="3_0ackr"]
 [ext_resource type="Script" uid="uid://cea6r7sdyh1m5" path="res://Scripts/MIKUMIKUBEAMHIT.gd" id="3_5murv"]
 [ext_resource type="Script" uid="uid://dq0n1a84lf4c6" path="res://Scripts/ray.gd" id="3_8ulvh"]
-[ext_resource type="Texture2D" uid="uid://hm0lv6sya1th" path="res://Sprites/laser.png" id="4_nj4kg"]
+[ext_resource type="Texture2D" uid="uid://hm0lv6sya1th" path="res://Sprites/TechnoZen/laser.png" id="4_nj4kg"]
 [ext_resource type="AudioStream" uid="uid://b4c85bfxd0ric" path="res://Sounds/Enemies/TechnoZen/explosion.wav" id="6_sw8hx"]
 [ext_resource type="AudioStream" uid="uid://brbcplnfpl1a7" path="res://Sounds/Enemies/TechnoZen/laserShoot (2).wav" id="7_jout3"]
 

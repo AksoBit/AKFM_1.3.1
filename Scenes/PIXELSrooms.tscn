@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://ct2t4fi6lp62b"]
 
-[ext_resource type="Shader" uid="uid://bikpltre5f3l2" path="res://Sprites/SubP.gdshader" id="1_gdqog"]
+[ext_resource type="Shader" uid="uid://bikpltre5f3l2" path="res://Shaders/SubP.gdshader" id="1_gdqog"]
 [ext_resource type="PackedScene" uid="uid://dhsclxwwchsih" path="res://Scenes/Домики.tscn" id="2_kd50x"]
 [ext_resource type="PackedScene" uid="uid://c60j373p4na4k" path="res://Scenes/backgroounds.tscn" id="3_ik2xn"]
 [ext_resource type="PackedScene" uid="uid://c1smc2f2r5c3u" path="res://Scenes/BACKROOMS.tscn" id="4_bk8u3"]
 [ext_resource type="PackedScene" uid="uid://1yb4wbnegc86" path="res://Scenes/UI.tscn" id="5_kd50x"]
-[ext_resource type="Shader" uid="uid://cf7f5lsu5ynts" path="res://Scenes/CRT.gdshader" id="6_bk8u3"]
-[ext_resource type="Script" uid="uid://cx2ehyer8t20w" path="res://Scenes/CRT.gd" id="7_31b67"]
+[ext_resource type="Shader" uid="uid://cf7f5lsu5ynts" path="res://Shaders/CRT.gdshader" id="6_bk8u3"]
+[ext_resource type="Script" uid="uid://cx2ehyer8t20w" path="res://Scripts/CRT.gd" id="7_31b67"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xxkch"]
 shader = ExtResource("1_gdqog")

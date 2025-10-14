@@ -1,6 +1,6 @@
 [gd_scene load_steps=41 format=3 uid="uid://djb65ej7jfkgw"]
 
-[ext_resource type="Script" uid="uid://bmjmsxv5yjpcm" path="res://Scenes/controls.gd" id="1_wwsa2"]
+[ext_resource type="Script" uid="uid://bmjmsxv5yjpcm" path="res://Scripts/controls.gd" id="1_wwsa2"]
 [ext_resource type="Script" uid="uid://vn0ragwmn6vf" path="res://Scripts/main_menu.gd" id="2_158mb"]
 [ext_resource type="Texture2D" uid="uid://qgk22uky6ykv" path="res://Sprites/WARNING.png" id="2_wwsa2"]
 [ext_resource type="AudioStream" uid="uid://b6o2lwyfadj0m" path="res://Music/1xx/100 Continue.ogg" id="3_wwsa2"]
@@ -9,9 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://dgmow4id2axdy" path="res://Sprites/Synth.png" id="6_wbdvm"]
 [ext_resource type="Texture2D" uid="uid://lo64rt3uuwmf" path="res://Sprites/Car.png" id="7_q3rjx"]
 [ext_resource type="Script" uid="uid://c68l5wtmdp0nw" path="res://Scripts/UwUwUwU.gd" id="9_i37ye"]
-[ext_resource type="AudioStream" uid="uid://cy4yxgjr4r5qk" path="res://Sounds/opened-the-car-door.mp3" id="10_pde1v"]
+[ext_resource type="AudioStream" uid="uid://ciox5th7011an" path="res://Sounds/opened-the-car-door.mp3" id="10_pde1v"]
 [ext_resource type="Texture2D" uid="uid://baqswstkfsvlg" path="res://Sprites/Grabber.png" id="11_3p34a"]
-[ext_resource type="StyleBox" uid="uid://ck1eiesqg272e" path="res://Scenes/Edging.tres" id="11_d77ms"]
+[ext_resource type="StyleBox" uid="uid://ck1eiesqg272e" path="res://Other/Edging.tres" id="11_d77ms"]
 [ext_resource type="Texture2D" uid="uid://5o4wgqfp0530" path="res://Sprites/ФонСинтSun.png" id="11_dldpb"]
 [ext_resource type="Texture2D" uid="uid://b4q3sdhdifyot" path="res://Sprites/ФонСинт.png" id="11_rfqti"]
 [ext_resource type="Script" uid="uid://boncn2yfamhgt" path="res://Scripts/OptionsButton.gd" id="12_g8i7c"]
@@ -27,8 +27,8 @@
 [ext_resource type="AudioStream" uid="uid://b66uyep17pi8m" path="res://Sounds/ROAD.wav" id="18_nakb8"]
 [ext_resource type="Script" uid="uid://csqaf8xrfm51d" path="res://Scripts/ResetEverything.gd" id="19_jbv25"]
 [ext_resource type="Texture2D" uid="uid://cqkv1dguooo0e" path="res://Sprites/Menu/Nah, i miscalled that one graphics. THIS ONE is graphics.png" id="19_ocger"]
-[ext_resource type="Script" uid="uid://cx2ehyer8t20w" path="res://Scenes/CRT.gd" id="21_pde1v"]
-[ext_resource type="Shader" uid="uid://cf7f5lsu5ynts" path="res://Scenes/CRT.gdshader" id="28_nakb8"]
+[ext_resource type="Script" uid="uid://cx2ehyer8t20w" path="res://Scripts/CRT.gd" id="21_pde1v"]
+[ext_resource type="Shader" uid="uid://cf7f5lsu5ynts" path="res://Shaders/CRT.gdshader" id="28_nakb8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l6llh"]
 radius = 91.0055

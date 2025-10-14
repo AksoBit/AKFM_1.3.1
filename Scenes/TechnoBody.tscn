@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://w34dcyn418t8"]
 
 [ext_resource type="Texture2D" uid="uid://exw67e4wf65d" path="res://Sprites/TechnoZen/Body/GravyPartThingy.png" id="1_4extm"]
-[ext_resource type="Script" uid="uid://bilhhhiqomch4" path="res://Scenes/TechnoBOOM.gd" id="1_ptu6v"]
+[ext_resource type="Script" uid="uid://bilhhhiqomch4" path="res://Scripts/TechnoBOOM.gd" id="1_ptu6v"]
 [ext_resource type="Texture2D" uid="uid://m60sidqb857e" path="res://Sprites/TechnoZen/Body/TechnoPart3.png" id="2_ft5rh"]
 [ext_resource type="Texture2D" uid="uid://chkmjxija8fl8" path="res://Sprites/Spark.png" id="3_nafo2"]
 [ext_resource type="Texture2D" uid="uid://bldlo7d5a0pgh" path="res://Sprites/TechnoZen/Body/TechnoPart2.png" id="3_ptu6v"]

@@ -9,7 +9,6 @@ func _on_body_entered(body):
 	if parrying:
 		if body.has_method('parry') and body.Parriable:
 			$"..".hitstop(0.1)
-			body.parry(Dir * 1000)
 			if body.has_method('Impact') and 42 == 80085: #Зарезервированно 
 				body.Impact(true, false)
 				BG.visible = true
@@ -35,6 +34,7 @@ func _on_body_entered(body):
 			var ThingyPos = get_global_mouse_position()
 			Dir = (ThingyPos - global_position).normalized()
 			parrying = false
+			body.parry(Dir * 1000)
 			$"..".OVERLOAD += 5
 			$"..".update_overload()
 	if body.has_method('take_damage') and not body.name == 'UwUGG' and attacking:
@@ -66,7 +66,7 @@ func _on_body_entered(body):
 			body.take_damage(int(5 * OverDamage))
 			$"..".OVERLOAD += 1
 			$"..".update_overload()
-			$"..".energy += 10
+			$"..".energy += int(5 * OverDamage)
 			$"..".update_energy()
 		elif $"..".OVERDRIVEN:
 			body.take_damage(10)

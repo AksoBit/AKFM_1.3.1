@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://b2fif5xdntjnl"]
 
 [ext_resource type="Texture2D" uid="uid://cu5iwnion486b" path="res://Sprites/PolyEdging.png" id="1_7a06y"]
-[ext_resource type="Script" uid="uid://usb5lcs6t76y" path="res://Scenes/IMPULSE.gd" id="2_7a06y"]
+[ext_resource type="Script" uid="uid://usb5lcs6t76y" path="res://Scripts/IMPULSE.gd" id="2_7a06y"]
 [ext_resource type="Script" uid="uid://cea6r7sdyh1m5" path="res://Scripts/MIKUMIKUBEAMHIT.gd" id="3_d53g5"]
-[ext_resource type="Texture2D" uid="uid://hm0lv6sya1th" path="res://Sprites/laser.png" id="4_8w6we"]
+[ext_resource type="Texture2D" uid="uid://hm0lv6sya1th" path="res://Sprites/TechnoZen/laser.png" id="4_8w6we"]
 [ext_resource type="Texture2D" uid="uid://chkmjxija8fl8" path="res://Sprites/Spark.png" id="5_dgkiu"]
 [ext_resource type="AudioStream" uid="uid://b4c85bfxd0ric" path="res://Sounds/Enemies/TechnoZen/explosion.wav" id="6_oieh4"]
 [ext_resource type="AudioStream" uid="uid://brbcplnfpl1a7" path="res://Sounds/Enemies/TechnoZen/laserShoot (2).wav" id="7_l6lnv"]

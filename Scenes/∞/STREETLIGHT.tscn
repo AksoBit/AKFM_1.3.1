@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b05rddicartd8"]
 
-[ext_resource type="Script" uid="uid://bj4e0prm7pkit" path="res://Scenes/∞/streetlight.gd" id="1_kn4yn"]
+[ext_resource type="Script" uid="uid://bj4e0prm7pkit" path="res://Scripts/streetlight.gd" id="1_kn4yn"]
 [ext_resource type="Texture2D" uid="uid://dhhvhvxvxcao4" path="res://Sprites/∞/Interior/LightThingyIFogotpng.png" id="2_oybf0"]
 [ext_resource type="AudioStream" uid="uid://bmphnctr5egca" path="res://Sounds/Bulb.wav" id="3_maao5"]
 [ext_resource type="Texture2D" uid="uid://dnt6s6utynko8" path="res://Sprites/∞/Interior/LightFromThatThingy.png" id="4_vobun"]

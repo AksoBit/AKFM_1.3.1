@@ -28,6 +28,6 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 		$"../Area2D".DESTROY()
 		queue_free()
 func parry(Dir):
-		linear_velocity = Dir
+		linear_velocity = Dir * 3
 		Damage += 20
 		print('+parry')

@@ -7,8 +7,10 @@ func _ready() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.has_method("take_damage"):
-		body.take_damage(damage)
+		if body.has_method("take_damage") and not body.name == "UwUGG":
+			body.take_damage(damage)
+		elif body.name == "UwUGG":
+			body.take_damage(damage/4)
 	
 func DESTROY():
 	damage = $"../RigidBody2D".Damage
