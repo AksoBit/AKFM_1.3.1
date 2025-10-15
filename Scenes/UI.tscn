@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://1yb4wbnegc86"]
 
-[ext_resource type="Texture2D" uid="uid://bc3ru1casnl48" path="res://Sprites/Battarey-Sheet.png" id="1_dewlx"]
+[ext_resource type="Texture2D" uid="uid://b58rqhn3wjrnb" path="res://Sprites/Battarey-Sheet.png" id="1_dewlx"]
 [ext_resource type="FontFile" uid="uid://ba8dqphbk1c1i" path="res://Fonts/Fifaks10Dev1.ttf" id="2_hfhsn"]
 [ext_resource type="Script" uid="uid://c38jvxskpucjb" path="res://Scripts/label.gd" id="3_qwshj"]
 [ext_resource type="Texture2D" uid="uid://cjvbi5ipyhyac" path="res://Sprites/MC/overload_bar.png" id="4_hfhsn"]
@@ -167,6 +167,7 @@ sprite_frames = SubResource("SpriteFrames_48q88")
 animation = &"72"
 
 [node name="Label" type="Label" parent="UI"]
+modulate = Color(1, 1, 1, 0.7490196)
 offset_left = -70.0
 offset_top = 31.0
 offset_right = 198.0

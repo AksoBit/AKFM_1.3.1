@@ -253,6 +253,7 @@ bus = &"SFX"
 [node name="Step" type="AudioStreamPlayer2D" parent="UwUGG"]
 stream = ExtResource("10_8kprs")
 volume_db = 24.0
+max_polyphony = 5
 bus = &"SFX"
 script = ExtResource("11_vvvbw")
 
@@ -279,9 +280,6 @@ process_material = SubResource("ParticleProcessMaterial_nhhmn")
 material = SubResource("ShaderMaterial_bcvmy")
 position = Vector2(0, -5)
 sprite_frames = SubResource("SpriteFrames_fgnqx")
-animation = &"run"
-frame = 3
-frame_progress = 0.265947
 speed_scale = 0.5
 
 [node name="Parry" type="AudioStreamPlayer" parent="UwUGG"]

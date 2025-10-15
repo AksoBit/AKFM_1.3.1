@@ -60,7 +60,6 @@ var HitstoppingNow = false
 var hitstopdur = 0
 
 #Овердрайв!
-var Overload
 var BladePoint1 = Vector2.ZERO #Используется для следов от рывков 
 var BladePoint2 = Vector2.ZERO
 var OVERDRIVEN = false #Сам факт овердрайва
@@ -223,6 +222,7 @@ func _input(event):
 			var NEWCORE = CORE.instantiate()
 			get_parent().add_child(NEWCORE)
 			NEWCORE.global_position = global_position
+			NEWCORE.get_node("RigidBody2D").MC = self
 			energy -= 5
 			update_energy()
 	if event is InputEventKey and event.keycode == KEY_1 and admin:
@@ -345,18 +345,18 @@ func overdose():
 		return
 	match DashOverdose:
 		1:
-			energy -= 5
+			energy -= 10
 			OVERLOAD -= 1
 			EnReg = false
 			update_energy()
 		2:
-			OVERLOAD -= 1
-			energy -= 10
+			OVERLOAD -= 2
+			energy -= 20
 			EnReg = false
 			update_energy()
 		3:
-			OVERLOAD -= 1
-			energy -= 20
+			OVERLOAD -= 3
+			energy -= 30
 			EnReg = false
 			update_energy()
 	EnReg = false
@@ -366,7 +366,7 @@ func OverdriveRift():
 	var NewNeonThingy = NeonThingy.instantiate()
 	get_parent().get_parent().add_child(NewNeonThingy)
 	var NeonShapeCast = NewNeonThingy.get_node("ShapeCast2D")
-	var NeonMain =	NewNeonThingy.get_node("AnimatedSprite2D")
+	var NeonMain = NewNeonThingy.get_node("AnimatedSprite2D")
 	var NeonTearStart = NewNeonThingy.get_node("TearStart")
 	var NeonTearEnd = NewNeonThingy.get_node("TearEnd")
 	BladePoint2 = global_position
@@ -584,6 +584,7 @@ func OVERDRIVE():
 	THIS_PLACE_ABOUT_TO_BLOW()
 	speed = 400
 	jump_force = 600
+	OVERLOAD = 0
 	print('Конец овердрайва')
 	if MusicPack == 1 and not Global.OVERDRUM:
 		music = load("res://Music/1xx/103 Early Hints.ogg")
@@ -618,4 +619,5 @@ func THIS_PLACE_ABOUT_TO_BLOW():
 	for node in Rifts:
 		node.BLOW()
 func update_overload():
+	OVERLOAD = clamp(OVERLOAD, 0, 100)
 	OverloadBar.text = str(OVERLOAD)

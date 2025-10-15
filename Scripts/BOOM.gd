@@ -15,4 +15,4 @@ func _on_body_entered(body: Node2D) -> void:
 func DESTROY():
 	damage = $"../RigidBody2D".Damage
 	await get_tree().create_timer(0.5).timeout
-	queue_free()
+	get_parent().queue_free()
